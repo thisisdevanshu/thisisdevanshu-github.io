@@ -1,39 +1,79 @@
+<!DOCTYPE html>
 <html>
+<head>
 
-
-<p style="text-align:center;font-size:24px;">
-.. -....- .-.. .. -.- . -....- - .... .- - -....- -.-- --- ..- -....- -.- -. --- .-- -....- -- --- .-. ... . -....- -.-. --- -.. . 
-<br/>
-<br/>
-Hello there !!!<br/><br/>
-I am Devanshu Singh, a Computer Science graduate with a specialization in Machine Learning. I finished my Master’s<br/> 
-in December, 2018 from the University of Florida, Gainesville.<br/><br/>
-
-I have an experience of three years as a Software Engineer mostly in back-end and server technologies. I have built<br/> 
-high-performance scalable products for early-stage startups using a vast breadth of tech stacks. I have also<br/>
-developed USSD (Unstructured Supplementary Services Data) products for various telecom operators of South and<br/>
-Southeast Asia.<br/><br/>
-
-I, currently, work at Barclays, New York as a Machine Learning Engineer. I work on models that help analysts at the<br/>
-investment bank  predict the stock market and the world economy.<br/><br/>
-
-Listing some of my personal projects, here:<br/>
-<a href="https://bitbucket.org/thisisdevanshu/elixir/src/master/proj4.1/bitcoin/" target="_blank">
-Cryptocurrency using blockchain
-</a> <br/>
-<a href="https://bitbucket.org/thisisdevanshu/skynet/src/master/" target="_blank">
-Landmark detection using Deep Convolutional Neural Networks
-</a> <br/>
-<a href="https://bitbucket.org/thisisdevanshu/cap6610machinelearning/src/master/" target="_blank">
-Hyperspectral Image Segmentation using various clustering algorithms
-</a>
-<br/>
-<br/>
-For more projects visit my <a href="https://www.linkedin.com/in/devanshusingh2/" target="_blank">LinkedIn</a> and feel free to contact me at my <a href="mailto:thisisdevanshu@gmail.com">email</a>.
-
-Thanks.<br/><br/><br/>
-
-- .... .. ... .. ... -.. . ...- .- -. ... .... ..- .-.-.- -.-. --- -- 
-</p>
-
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+</head>
+<body>
+</body>
 </html>
+
+<script>
+$('body').terminal({
+    help: function() {
+    	this.echo(help)        
+    },
+    about: function() {
+    	this.echo($(img));
+    	this.echo(about)        
+    },
+    contact: function() {
+    	this.echo(contact)        
+    },
+    project: function() {
+    	this.echo(project)        
+    },
+    tldr: function() {
+    	this.echo($(img));
+    	this.echo(about + project + contact)
+    }
+    
+}, {
+    greetings: "Welcome to www.thisisdevanshu.com\n\n	Type 'help' to start navigating my website.\n 		OR\n 	Just type 'tldr'\n\n"
+});
+
+var img = '<img src="https://avatars3.githubusercontent.com/u/8132290?s=300&u=7951b66f9ebd1995db6ddb4e21651f887ff8f1d8&v=4">'
+
+var about = ` 	
+
+Devanshu Singh - Software Engineer at Barclays Investment Bank.
+
+I have a Masters degree in Computer Science (Machine Learning) from the
+University of Florida.
+
+I have an experience of four years in back-end and server technologies,
+wherein I have built high-performance scalable products for early-stage
+startups using a vast breadth of tech stacks. I have also developed
+USSD(Unstructured Supplementary Services Data) products for various 
+telecom operators of South and Southeast Asia.
+    		`
+
+var contact = `
+Feel free to reach me out at [[!;;;;thisisdevanshu@gmail.com]email]
+  			`
+var project = `
+Listing few of my projects here
+
+	1. [[!;;;;https://bitbucket.org/thisisdevanshu/elixir/src/master/proj4.1/bitcoin/]Cryptocurrency using blockchain]
+    2. [[!;;;;https://bitbucket.org/thisisdevanshu/skynet/src/master/]Landmark detection using Deep Convolutional Neural Networks]
+    3. [[!;;;;https://bitbucket.org/thisisdevanshu/cap6610machinelearning/src/master/]Hyperspectral Image Segmentation using various clustering algorithms]
+    				
+For more projects visit my [[!;;;;https://www.linkedin.com/in/devanshusingh2/]linkedIn]
+    			`
+var help = `		
+Here is a list of supported commands in lexicographical order:
+
+    1. about
+    2. contact 
+    3. help
+    4. project
+    5. tldr
+`
+	
+</script>
+
+
+
+
